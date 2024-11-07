@@ -1,2 +1,3 @@
 .venv/*
-model/model.pt
+model/model.h5
+SOTA/model.pt
