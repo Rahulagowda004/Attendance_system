@@ -3,3 +3,4 @@ model/model.h5
 SOTA/model.pt
 dataset_directory/*
 data/*
+cropped_boxes/*
