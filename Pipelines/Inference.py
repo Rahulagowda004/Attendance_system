@@ -26,7 +26,7 @@ class inference_cropping:
             cropped_image = image.crop((x1, y1, x2, y2))
             
             # Save the cropped image
-            cropped_image_path = os.path.join(output_dir, f"box_{box_id}.png")
+            cropped_image_path = os.path.join(self.output_dir, f"box_{box_id}.png")
             cropped_image.save(cropped_image_path)
 
-        print(f"All bounding boxes cropped and saved in '{output_dir}' directory.")
+        print(f"All bounding boxes cropped and saved in '{self.output_dir}' directory.")
