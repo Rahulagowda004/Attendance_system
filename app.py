@@ -6,6 +6,7 @@ import cv2
 import numpy as np
 from ultralytics import YOLO
 from supervision import Detections
+from Pipelines.inference_prediction import Predictions
 
 # Load the YOLO model
 model = YOLO("models/yolo_model/model.pt")

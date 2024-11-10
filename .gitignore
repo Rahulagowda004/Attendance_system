@@ -1,3 +1,5 @@
 .venv/*
 
 artifacts
+Upload_pipeline/santhosh_box_0.png
+Pipelines/__pycache__/inference_prediction.cpython-312.pyc
