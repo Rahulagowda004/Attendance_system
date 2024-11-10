@@ -1,3 +1,5 @@
 .venv/*
-artifacts/*
-data_set/*
+
+artifacts
+
+testing_images
