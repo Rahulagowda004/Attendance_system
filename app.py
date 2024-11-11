@@ -7,6 +7,10 @@ import numpy as np
 from ultralytics import YOLO
 from supervision import Detections
 from Pipelines.inference_prediction import Predictions
+import numpy as np
+from PIL import Image
+import tensorflow as tf
+import keras
 
 # Load the YOLO model
 model = YOLO("models/yolo_model/model.pt")
@@ -40,17 +44,56 @@ class ImageCropper:
             final_image = Image.fromarray(image_np)
             return final_image
 
+@keras.saving.register_keras_serializable()
+def scaling(x, scale=1.0):
+    return x * scale
+
+# Load the model
+model_inference = keras.models.load_model("artifacts/model.keras", custom_objects={'scaling': scaling})
+
+class Predictions:
+    def __init__(self, image_path, model=model_inference):
+        self.image_path = image_path
+        self.model = model
+        self.input_size = (160, 160)
+        
+    def preprocess_image(self):
+        image = Image.open(self.image_path).convert("RGB")
+        image = image.resize(self.input_size, Image.LANCZOS)
+        image_array = np.array(image) / 255.0
+        image_array = np.expand_dims(image_array, axis=0)
+        return image_array
+    
+    def predict(self):
+        preprocessed_image = self.preprocess_image()
+        prediction = self.model.predict(preprocessed_image)
+        predicted_class = np.argmax(prediction)
+        return predicted_class
+
+def present_names():
+    present = []
+    
+    for files in os.listdir("R:/Attendance_system/artifacts/Inference"):
+        image_path = f"R:/Attendance_system/artifacts/Inference/{files}"
+        pred = Predictions(image_path)
+        present.append(pred.predict())
+    label = {0:"Ben",1:"Rahul",2:"Santhosh",3:"Naveen"}
+    mapped_names = [label[i] for i in present]
+    return mapped_names
+
+
 def main():
     st.title("YOLO Image Detection and Cropping")
 
     uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"])
-
+    
     if uploaded_file is not None:
         image = Image.open(uploaded_file)
         cropper = ImageCropper()
         predicted_image = cropper.detect_faces(image)
         st.image(predicted_image, caption='Uploaded Image', use_container_width=True) 
         cropper.crop_and_save_images(image, uploaded_file.name)
-
+        names = present_names()
+        st.write(f"Present names: {names}")
 if __name__ == "__main__":
     main()
