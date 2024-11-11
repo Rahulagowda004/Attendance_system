@@ -95,5 +95,6 @@ def main():
         cropper.crop_and_save_images(image, uploaded_file.name)
         names = present_names()
         st.write(f"Present names: {names}")
+        
 if __name__ == "__main__":
     main()
