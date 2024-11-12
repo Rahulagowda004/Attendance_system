@@ -5,15 +5,15 @@ The Automated Attendance System is a web application designed to streamline atte
 
 ## Key Features
 
-- **Flexible Training Options:** Train the model easily with multiple faces simultaneously or with a single face, making it adaptable to various environments.
-- **Real-Time Face Recognition:** Uses YOLO and facenet for accurate face detection and recognition, ensuring reliable attendance logging.
-- **Capture-Based Attendance:** Capture class attendance by simply taking photos, ideal for large groups where real-time recognition is needed.
-- **Web Interface:** The system is deployed as a web application, making it accessible from any device with a browser.
-- **Scalable:** Can be integrated into larger attendance management systems or used as a standalone solution.
+- Flexible Training Options:Train the model easily with multiple faces simultaneously or with a single face, making it adaptable to various environments.
+- Real-Time Face Recognition:Uses YOLO and facenet for accurate face detection and recognition, ensuring reliable attendance logging.
+- Capture-Based Attendance:Capture class attendance by simply taking photos, ideal for large groups where real-time recognition is needed.
+- Web Interface:The system is deployed as a web application, making it accessible from any device with a browser.
+- Scalable: Can be integrated into larger attendance management systems or used as a standalone solution.
 
 ## Technologies Used
 
-- **Languages & Frameworks:** Python, HTML, Streamlit
+- **Languages & Frameworks: Python, HTML, Streamlit
 - **Libraries:** facenet_pytorch, OpenCV, YOLO
 - **Other Tools:** numpy, PIL, torch, and more
 
@@ -43,7 +43,7 @@ To set up the Automated Attendance System locally, follow these steps:
 
 ## Usage Instructions
 
-1. **Start the Web Application:** Run the Streamlit application:
+1. Start the Web Application: Run the Streamlit application:
 
     ```bash
     streamlit run app.py
@@ -51,22 +51,22 @@ To set up the Automated Attendance System locally, follow these steps:
 
     This will start a local server, typically accessible at http://localhost:8501.
 
-2. **Configure Attendance Settings:**
+2. Configure Attendance Settings:
     - Upload or train the system with user images for face recognition.
     - Configure settings such as recognition thresholds, attendance logs, and session details.
 
-3. **Using the Attendance System:**
+3. Using the Attendance System:
     - Capture photos of the class, which the system will process to recognize faces and mark attendance automatically.
     - Recognized faces are marked as present in the attendance log, ready for review.
 
-4. **Accessing Attendance Logs:**
+4. Accessing Attendance Logs:
     - Attendance logs are saved in a database or CSV file (customizable).
     - View or export attendance data through the application’s interface.
 
 ## Examples of Use
 
-- **School Environment:** Capture a group photo of the classroom for easy attendance logging.
-- **Company Meetings:** Track attendance by capturing an image of participants.
+- School Environment: Capture a group photo of the classroom for easy attendance logging.
+- Company Meetings: Track attendance by capturing an image of participants.
 
 ## Future Roadmap
 
@@ -81,7 +81,10 @@ To set up the Automated Attendance System locally, follow these steps:
 
 ## Contributors
 
-- Your Name - [GitHub Profile](https://github.com/yourusername)
+- Rahul A Gowda
+- Santhosh R
+- S Naveen Gowda
+- Benhur Stephen Kumar 
 
 ## License
 
