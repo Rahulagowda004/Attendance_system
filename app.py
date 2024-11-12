@@ -117,7 +117,7 @@ def main():
     # Perform face detection and cropping
     cropper = ImageCropper()
     predicted_image = cropper.detect_faces(image)
-    st.image(predicted_image, caption='Processed Image', use_container_width=True)
+    st.image(predicted_image, caption='Processed Image')
     
     # Save cropped images
     image_name = uploaded_file.name if uploaded_file else "camera_image"
