@@ -81,6 +81,8 @@ class training:
             validation_data=val_generator,
         )
         
+        if not os.path.exists("artifacts/models"):
+            os.makedirs("artifacts/models")
         keras.saving.save_model(final_model, "artifacts/models/model.keras")
         
 if __name__ == "__main__":
