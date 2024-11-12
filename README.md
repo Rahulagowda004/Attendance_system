@@ -5,17 +5,17 @@ The Automated Attendance System is a web application designed to streamline atte
 
 ## Key Features
 
-- Flexible Training Options:Train the model easily with multiple faces simultaneously or with a single face, making it adaptable to various environments.
-- Real-Time Face Recognition:Uses YOLO and facenet for accurate face detection and recognition, ensuring reliable attendance logging.
-- Capture-Based Attendance:Capture class attendance by simply taking photos, ideal for large groups where real-time recognition is needed.
-- Web Interface:The system is deployed as a web application, making it accessible from any device with a browser.
+- Flexible Training Options: Train the model easily with multiple faces simultaneously or with a single face, making it adaptable to various environments.
+- Real-Time Face Recognition: Uses YOLO and facenet for accurate face detection and recognition, ensuring reliable attendance logging.
+- Capture-Based Attendance: Capture class attendance by simply taking photos, ideal for large groups where real-time recognition is needed.
+- Web Interface: The system is deployed as a web application, making it accessible from any device with a browser.
 - Scalable: Can be integrated into larger attendance management systems or used as a standalone solution.
 
 ## Technologies Used
 
-- **Languages & Frameworks: Python, HTML, Streamlit
-- **Libraries:** facenet_pytorch, OpenCV, YOLO
-- **Other Tools:** numpy, PIL, torch, and more
+- Languages & Frameworks: Python, HTML, Streamlit
+- Libraries: facenet_pytorch, OpenCV, YOLO
+- Other Tools: numpy, PIL, torch, and more
 
 ## Installation Instructions
 
@@ -70,14 +70,17 @@ To set up the Automated Attendance System locally, follow these steps:
 
 ## Future Roadmap
 
-- **Mobile Compatibility:** Develop a mobile-friendly version of the application.
-- **Enhanced Security:** Add multi-factor authentication or other security features.
-- **Analytics Dashboard:** Incorporate data analysis to track attendance trends and patterns.
+- Mobile Compatibility: Develop a mobile-friendly version of the application.
+- Enhanced Security: Add multi-factor authentication or other security features.
+- Analytics Dashboard: Incorporate data analysis to track attendance trends and patterns.
+
+
+
 
 ## Known Issues / Bugs
 
-- **Camera Permissions:** Ensure camera permissions are enabled on devices to allow video access.
-- **Face Recognition Limitations:** Factors such as lighting, camera quality, and angle may impact recognition accuracy.
+- Camera Permissions: Ensure camera permissions are enabled on devices to allow video access.
+- Face Recognition Limitations: Factors such as lighting, camera quality, and angle may impact recognition accuracy.
 
 ## Contributors
 
@@ -86,6 +89,4 @@ To set up the Automated Attendance System locally, follow these steps:
 - S Naveen Gowda
 - Benhur Stephen Kumar 
 
-## License
 
-This project is licensed under the MIT License. See the LICENSE file for details.
